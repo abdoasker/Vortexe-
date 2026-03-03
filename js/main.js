@@ -38,13 +38,8 @@ if (contactForm) {
   });
 }
 
-// إنشاء QR Code لرابط الموقع الحالي
-let SITE_URL = window.location.href;
-// لو الرابط محلي file:// نخلي قيمة افتراضية يمكن تعديلها عند الرفع على الدومين
-if (!SITE_URL.startsWith("http")) {
-  SITE_URL = "https://your-domain.com"; // عدّل الرابط هنا عند الرفع
-}
-
+// إنشاء QR Code لرابط الموقع الثابت
+const SITE_URL = "https://abdoasker.github.io/Vortexe-/";
 const qrContainer = document.getElementById("qrcode");
 if (qrContainer && window.QRCode) {
   // تنظيف لو تم إنشاؤه من قبل
